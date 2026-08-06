@@ -129,7 +129,7 @@ Nếu có thêm thời gian, tôi sẽ bổ sung automated tests cho các trư�
 - [x] Các kết luận đã nêu đều gắn với code hoặc artifact có thể đối chiếu; không bịa metrics.
 - [x] Tôi không ghi “đã chạy thành công” cho phần baseline/corruption end-to-end chưa được kiểm chứng.
 - [x] Báo cáo không chứa `.env`, API key, token hoặc secret.
-- [x] Báo cáo này không phải bản sao nguyên văn của nhóm..
+
 
 **Họ và tên:** Nguyễn Mạnh Thắng  
 **Ngày xác nhận:** 2026-08-06

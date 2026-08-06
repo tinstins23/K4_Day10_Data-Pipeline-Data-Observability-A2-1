@@ -1,0 +1,24 @@
+{
+  "report_name": "corrupted_quality",
+  "generated_at": "2026-08-06T09:35:12.140004+00:00",
+  "total_rows": 24,
+  "passed": false,
+  "checks": {
+    "row_count_positive": true,
+    "paper_id_not_null": true,
+    "paper_id_unique": false,
+    "title_not_blank": true,
+    "summary_not_blank": false,
+    "summary_min_length": false,
+    "freshness_threshold": false
+  },
+  "details": {
+    "null_paper_ids": 0,
+    "duplicate_paper_ids": 3,
+    "blank_titles": 0,
+    "blank_summaries": 6,
+    "short_summaries": 6,
+    "stale_rows": 3,
+    "freshness_threshold_days": 180
+  }
+}

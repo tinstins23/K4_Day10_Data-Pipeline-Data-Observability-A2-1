@@ -1,0 +1,77 @@
+{
+  "report_name": "stale_sample",
+  "success": false,
+  "row_count": 2,
+  "freshness_threshold_days": 180,
+  "min_summary_chars": 40,
+  "failed_checks": [
+    "freshness_age_days"
+  ],
+  "checks": [
+    {
+      "name": "row_count_positive",
+      "dimension": "completeness",
+      "passed": true,
+      "expected": "> 0",
+      "actual": 2,
+      "details": "Dataset ph\u1ea3i c\u00f3 \u00edt nh\u1ea5t m\u1ed9t b\u1ea3n ghi."
+    },
+    {
+      "name": "paper_id_not_null",
+      "dimension": "completeness",
+      "passed": true,
+      "expected": 0,
+      "actual": 0,
+      "details": "S\u1ed1 b\u1ea3n ghi thi\u1ebfu paper_id."
+    },
+    {
+      "name": "paper_id_unique",
+      "dimension": "uniqueness",
+      "passed": true,
+      "expected": 0,
+      "actual": 0,
+      "details": "S\u1ed1 paper_id b\u1ecb tr\u00f9ng."
+    },
+    {
+      "name": "title_not_null",
+      "dimension": "completeness",
+      "passed": true,
+      "expected": 0,
+      "actual": 0,
+      "details": "S\u1ed1 b\u1ea3n ghi thi\u1ebfu title."
+    },
+    {
+      "name": "summary_min_length",
+      "dimension": "validity",
+      "passed": true,
+      "expected": ">= 40 chars for all rows",
+      "actual": {
+        "short_rows": 0,
+        "min_chars": 80,
+        "median_chars": 85.0
+      },
+      "details": "Summary ng\u1eafn h\u01a1n 40 k\u00fd t\u1ef1 b\u1ecb coi l\u00e0 kh\u00f4ng h\u1ee3p l\u1ec7."
+    },
+    {
+      "name": "freshness_age_days",
+      "dimension": "freshness",
+      "passed": false,
+      "expected": "age_days <= 180 for all rows",
+      "actual": {
+        "stale_rows": 1,
+        "missing_age_rows": 0,
+        "max_age_days": 400
+      },
+      "details": "B\u1ea3n ghi v\u01b0\u1ee3t ng\u01b0\u1ee1ng freshness_threshold_days b\u1ecb coi l\u00e0 stale."
+    },
+    {
+      "name": "text_for_embedding_not_blank",
+      "dimension": "completeness",
+      "passed": true,
+      "expected": 0,
+      "actual": 0,
+      "details": "S\u1ed1 b\u1ea3n ghi thi\u1ebfu text_for_embedding."
+    }
+  ],
+  "artifact_path": "D:\\K4_Day10_Data-Pipeline-Data-Observability-A2-1\\data\\quality\\stale_sample_quality.json"
+}

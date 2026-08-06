@@ -49,5 +49,10 @@ def build_llm(settings: Settings, temperature: float = 0.0):
             api_key=settings.custom_llm_api_key or "unused",
             base_url=settings.custom_llm_base_url,
             temperature=temperature,
+            # DeepSeek (va cac model reasoning tuong tu) bat "thinking mode" mac dinh,
+            # o che do nay API khong cho force tool_choice ve 1 ham cu the -> loi 400
+            # "Thinking mode does not support this tool_choice" khi dung with_structured_output.
+            # Tat thinking mode de ho tro structured output/tool calling on dinh.
+            extra_body={"thinking": {"type": "disabled"}},
         )
     raise RuntimeError(f"Unsupported LLM provider: {settings.llm_provider}")

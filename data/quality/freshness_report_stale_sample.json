@@ -1,0 +1,11 @@
+{
+  "latest_published": "2026-07-17",
+  "oldest_published": "2025-07-02",
+  "stale_rows": 1,
+  "total_rows": 2,
+  "is_fresh": false,
+  "freshness_threshold_days": 180,
+  "max_age_days": 400,
+  "mean_age_days": 210.0,
+  "artifact_path": "D:\\K4_Day10_Data-Pipeline-Data-Observability-A2-1\\data\\quality\\freshness_report_stale_sample.json"
+}
