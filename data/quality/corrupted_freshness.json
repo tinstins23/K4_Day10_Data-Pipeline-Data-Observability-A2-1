@@ -1,0 +1,10 @@
+{
+  "report_name": "corrupted_freshness",
+  "generated_at": "2026-08-06T09:35:12.142002+00:00",
+  "latest_published": "2026-07-10",
+  "oldest_published": "2000-01-01",
+  "stale_rows": 3,
+  "total_rows": 24,
+  "is_fresh": false,
+  "freshness_threshold_days": 180
+}
