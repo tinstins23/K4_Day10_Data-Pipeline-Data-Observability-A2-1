@@ -63,5 +63,5 @@
       "details": "Rows with age_days above freshness_threshold_days are stale."
     }
   ],
-  "artifact_path": "D:\\K4_Day10_Data-Pipeline-Data-Observability-A2-1\\data\\quality\\baseline_quality.json"
+  "artifact_path": "/Users/hunggoodboy/Documents/Day-10/K4_Day10_Data-Pipeline-Data-Observability-A2-1/data/quality/baseline_quality.json"
 }

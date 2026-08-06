@@ -20,9 +20,9 @@ Baseline pipeline report: source -> evaluation metrics -> data quality -> freshn
 | Metric | Value |
 | --- | ---: |
 | `retrieval_hit_rate` | 1.0000 |
-| `mean_token_f1` | 0.6667 |
-| `judge_accuracy` | 0.6667 |
-| `mean_judge_score` | 3.6667 |
+| `mean_token_f1` | 1.0000 |
+| `judge_accuracy` | 1.0000 |
+| `mean_judge_score` | 5 |
 | `samples` | 24 |
 
 ### Ragas

@@ -1,53 +1,32 @@
-# Corruption Comparison Report
+# Corruption, Repair and Reliability Report
 
-So sánh metrics, data quality và freshness giữa baseline, corrupted và repaired.
+Generated at: `2026-08-06T09:35:46.402192+00:00`
 
-## Metrics comparison
+## 1. Evaluation comparison
 
-| Metric | Baseline | Corrupted | Repaired | Δ corrupt | Δ repair |
-| --- | ---: | ---: | ---: | ---: | ---: |
-| `retrieval_hit_rate` | 0.7500 | 0.4000 | 0.7200 | -0.3500 | +0.3200 |
-| `mean_token_f1` | 0.6100 | 0.3000 | 0.5800 | -0.3100 | +0.2800 |
-| `judge_accuracy` | 0.7000 | 0.4000 | 0.6800 | -0.3000 | +0.2800 |
-| `mean_judge_score` | 3.5000 | 2.1000 | 3.4000 | -1.4000 | +1.3000 |
+| Metric | Baseline | Corrupted | Repaired | Corruption delta | Repair delta |
+|---|---:|---:|---:|---:|---:|
+| retrieval_hit_rate | 1.0000 | 0.6250 | 1.0000 | -0.3750 | 0.3750 |
+| mean_token_f1 | 1.0000 | 0.5028 | 1.0000 | -0.4972 | 0.4972 |
+| judge_accuracy | 1.0000 | 0.5000 | 1.0000 | -0.5000 | 0.5000 |
+| mean_judge_score | 5.0000 | 3.0833 | 5.0000 | -1.9167 | 1.9167 |
 
-## Quality & freshness comparison
+## 2. Data quality comparison
 
-| Signal | Corrupted | Repaired |
-| --- | --- | --- |
-| Quality success | `fail` | `pass` |
-| Failed checks | `['summary_min_length']` | `[]` |
-| Freshness is_fresh | `fail` | `pass` |
-| Stale rows | `3` | `0` |
+- Corrupted quality passed: **False**
+- Repaired quality passed: **True**
+- Corrupted duplicate paper IDs: **3**
+- Repaired duplicate paper IDs: **0**
+- Corrupted blank summaries: **6**
+- Repaired blank summaries: **0**
 
-## Corrupted data quality
+## 3. Freshness comparison
 
-- **Success:** `fail`
-- **Row count:** `N/A`
-- **Failed checks:** `['summary_min_length']`
+- Corrupted stale rows: **3 / 24**
+- Repaired stale rows: **0 / 24**
+- Corrupted latest publication: `2026-07-10`
+- Repaired latest publication: `2026-08-01`
 
-## Corrupted freshness
+## 4. Reliability conclusion
 
-- **is_fresh:** `fail`
-- **latest_published:** `N/A`
-- **oldest_published:** `N/A`
-- **stale_rows:** `3` / `N/A`
-- **freshness_threshold_days:** `N/A`
-- **max_age_days:** `N/A`
-- **mean_age_days:** `N/A`
-
-## Repaired data quality
-
-- **Success:** `pass`
-- **Row count:** `N/A`
-- **Failed checks:** `[]`
-
-## Repaired freshness
-
-- **is_fresh:** `pass`
-- **latest_published:** `N/A`
-- **oldest_published:** `N/A`
-- **stale_rows:** `0` / `N/A`
-- **freshness_threshold_days:** `N/A`
-- **max_age_days:** `N/A`
-- **mean_age_days:** `N/A`
+The corrupted corpus is expected to show measurable degradation in retrieval, answer quality, uniqueness, completeness, or freshness. The repaired corpus is rebuilt from the raw Crossref snapshot rather than edited in place, so its metrics should move back toward the baseline state.
