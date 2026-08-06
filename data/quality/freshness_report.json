@@ -7,5 +7,5 @@
   "freshness_threshold_days": 180,
   "max_age_days": 175,
   "mean_age_days": 76.58333333333333,
-  "artifact_path": "D:\\K4_Day10_Data-Pipeline-Data-Observability-A2-1\\data\\quality\\freshness_report.json"
+  "artifact_path": "/Users/hunggoodboy/Documents/Day-10/K4_Day10_Data-Pipeline-Data-Observability-A2-1/data/quality/freshness_report.json"
 }

@@ -59,7 +59,9 @@ Return:
 - short reasoning
 """.strip()
     try:
-        llm = build_llm(settings=settings, temperature=0.0).with_structured_output(JudgeVerdict)
+        llm = build_llm(settings=settings, temperature=0.0).with_structured_output(
+            JudgeVerdict, method="function_calling"
+        )
         return llm.invoke(prompt)
     except Exception:
         score = 5 if _token_f1(reference, prediction) >= 0.95 else 3 if _token_f1(reference, prediction) >= 0.5 else 1
