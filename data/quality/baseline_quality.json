@@ -1,0 +1,67 @@
+{
+  "report_name": "baseline",
+  "success": true,
+  "row_count": 24,
+  "freshness_threshold_days": 180,
+  "min_summary_chars": 40,
+  "failed_checks": [],
+  "checks": [
+    {
+      "name": "row_count_positive",
+      "dimension": "completeness",
+      "passed": true,
+      "expected": "> 0",
+      "actual": 24,
+      "details": "Dataset must contain at least one row."
+    },
+    {
+      "name": "paper_id_not_null",
+      "dimension": "completeness",
+      "passed": true,
+      "expected": 0,
+      "actual": 0,
+      "details": "Count of rows with missing paper_id."
+    },
+    {
+      "name": "paper_id_unique",
+      "dimension": "uniqueness",
+      "passed": true,
+      "expected": 0,
+      "actual": 0,
+      "details": "Count of duplicate paper_id values."
+    },
+    {
+      "name": "title_not_null",
+      "dimension": "completeness",
+      "passed": true,
+      "expected": 0,
+      "actual": 0,
+      "details": "Count of rows with missing title."
+    },
+    {
+      "name": "summary_min_length",
+      "dimension": "validity",
+      "passed": true,
+      "expected": ">= 40 chars for all rows",
+      "actual": {
+        "short_rows": 0,
+        "min_chars": 834,
+        "median_chars": 1661.0
+      },
+      "details": "Summaries shorter than 40 characters fail."
+    },
+    {
+      "name": "freshness_age_days",
+      "dimension": "freshness",
+      "passed": true,
+      "expected": "age_days <= 180 for all rows",
+      "actual": {
+        "stale_rows": 0,
+        "missing_age_rows": 0,
+        "max_age_days": 175
+      },
+      "details": "Rows with age_days above freshness_threshold_days are stale."
+    }
+  ],
+  "artifact_path": "D:\\K4_Day10_Data-Pipeline-Data-Observability-A2-1\\data\\quality\\baseline_quality.json"
+}
