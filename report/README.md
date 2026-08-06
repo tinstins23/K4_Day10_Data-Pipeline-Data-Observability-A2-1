@@ -7,7 +7,7 @@ Thư mục `report/` cung cấp mẫu báo cáo cho **bài tập bắt buộc l�
 Mỗi nhóm nộp:
 
 1. Một [`group_report.md`](group_report.md) đại diện cho kết quả chung của nhóm.
-2. Mỗi thành viên hoàn thành thêm một bản [`individual_report.md`](2A202601640_NguyenXuanHung.md) để mô tả vai trò, phần việc, kết quả và mức hiểu của mình trong nhóm.
+2. Mỗi thành viên hoàn thành thêm một bản [`individual_report.md`](2A202601640_Nguyễn Xuân Hùng.md) để mô tả vai trò, phần việc, kết quả và mức hiểu của mình trong nhóm.
 
 Khi cần lưu nhiều báo cáo thành viên trong cùng repository, nhóm nên tạo bản sao theo quy ước:
 
